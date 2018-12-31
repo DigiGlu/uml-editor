@@ -750,7 +750,7 @@ EditorUi.prototype.menubarHeight = 30;
 /**
  * Specifies the width of the format panel should be enabled. Default is true.
  */
-EditorUi.prototype.formatEnabled = true;
+EditorUi.prototype.formatEnabled = false;
 
 /**
  * Specifies the width of the format panel. Default is 240.
@@ -765,7 +765,7 @@ EditorUi.prototype.toolbarHeight = 34;
 /**
  * Specifies the height of the footer. Default is 28.
  */
-EditorUi.prototype.footerHeight = 28;
+EditorUi.prototype.footerHeight = 0;
 
 /**
  * Specifies the height of the optional sidebarFooterContainer. Default is 34.

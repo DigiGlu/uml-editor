@@ -28,7 +28,7 @@ Menus.prototype.defaultFontSize = '12';
 /**
  * Sets the default font size.
  */
-Menus.prototype.defaultMenuItems = ['file', 'edit', 'view', 'arrange', 'extras', 'help'];
+Menus.prototype.defaultMenuItems = ['edit', 'view', 'arrange'];
 
 /**
  * Adds the label menu items to the given menu and parent.
@@ -395,21 +395,21 @@ Menus.prototype.init = function () {
 
     this.addMenuItems(menu, ['-', 'fitWindow', 'fitPageWidth', 'fitPage', 'fitTwoPages', '-', 'customZoom'], parent);
   })));
-  this.put('file', new Menu(mxUtils.bind(this, function (menu, parent) {
-    this.addMenuItems(menu, ['new', 'open', '-', 'save', 'saveAs', '-', 'import', 'export', '-',
-      'generateCode', '-', 'pageSetup', 'print'], parent);
-  })));
+  // this.put('file', new Menu(mxUtils.bind(this, function (menu, parent) {
+  //   this.addMenuItems(menu, ['new', 'open', '-', 'save', 'saveAs', '-', 'import', 'export', '-',
+  //     'generateCode', '-', 'pageSetup', 'print'], parent);
+  // })));
   this.put('edit', new Menu(mxUtils.bind(this, function (menu, parent) {
     this.addMenuItems(menu, ['undo', 'redo', '-', 'cut', 'copy', 'paste', 'delete', '-', 'duplicate', '-',
 		                         'editData', 'editTooltip', 'editStyle', '-', 'edit', '-', 'editLink', 'openLink', '-',
 		                         'selectVertices', 'selectEdges', 'selectAll', 'selectNone', '-', 'lockUnlock']);
   })));
-  this.put('extras', new Menu(mxUtils.bind(this, function (menu, parent) {
-    this.addMenuItems(menu, ['copyConnect', 'collapseExpand', '-', 'editDiagram']);
-  })));
-  this.put('help', new Menu(mxUtils.bind(this, function (menu, parent) {
-    this.addMenuItems(menu, ['help', '-', 'about']);
-  })));
+  // this.put('extras', new Menu(mxUtils.bind(this, function (menu, parent) {
+  //   this.addMenuItems(menu, ['copyConnect', 'collapseExpand', '-', 'editDiagram']);
+  // })));
+  // this.put('help', new Menu(mxUtils.bind(this, function (menu, parent) {
+  //   this.addMenuItems(menu, ['help', '-', 'about']);
+  // })));
 };
 
 /**

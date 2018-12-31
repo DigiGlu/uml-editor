@@ -6,21 +6,11 @@ var editorUiInit = EditorUi.prototype.init;
 
 EditorUi.prototype.init = function () {
   editorUiInit.apply(this, arguments);
-  this.actions.get('export').setEnabled(true);
+  // this.actions.get('export').setEnabled(true);
 
   // Updates action states which require a backend
-  Editor.useLocalStorage = true;
-  Editor.useFileSystemSave = true;
-  if (!Editor.useLocalStorage) {
-    mxUtils.post(OPEN_URL, '', mxUtils.bind(this, function (req) {
-      var enabled = req.getStatus() != 404;
-      this.actions.get('open').setEnabled(enabled || Graph.fileSupport);
-      this.actions.get('import').setEnabled(enabled || Graph.fileSupport);
-      this.actions.get('save').setEnabled(enabled);
-      this.actions.get('saveAs').setEnabled(enabled);
-      this.actions.get('export').setEnabled(enabled);
-    }));
-  }
+  Editor.useLocalStorage = false;
+  Editor.useFileSystemSave = false;
 };
 
 // Adds required resources (disables loading of fallback properties, this can only
